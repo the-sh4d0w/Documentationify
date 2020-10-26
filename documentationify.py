@@ -1,4 +1,3 @@
-# @Sh4d0w
 import importlib
 import inspect
 import os
@@ -14,7 +13,7 @@ def document(path: str) -> None:
      Created documentation in C:\Users\JohnDoe\Desktop\Test-Documentation.txt.
     """
     if not path:
-        os._exit(0)
+        return
     elif not (path.endswith("py") or path.endswith("pyw")):
         raise Exception("Your file is not a python file.")
     documentation = ""
@@ -69,7 +68,7 @@ def document(path: str) -> None:
 
 
 if __name__ == "__main__":
-    print(" Please note that for creating an useful documentation your help is needed. Use docstrings (PEP 257: https://www.python.org/dev/peps/pep-0257/) and function annotations (PEP 3107: https://www.python.org/dev/peps/pep-3107/).\n Python executes files when importing them. To create the documentation the file is imported so make sure that you don't have code that will be executed. You can do that by checking if __name__ == '__main__'.\nIf you don't want to continue just press enter without entering a path.\n")
+    print("Please note that for creating an useful documentation your help is needed. Use docstrings (PEP 257: https://www.python.org/dev/peps/pep-0257/) and function annotations (PEP 3107: https://www.python.org/dev/peps/pep-3107/).\nPython executes files when importing them. To create the documentation the file is imported so make sure that you don't have code that will be executed. You can do that by checking if __name__ == '__main__'.\nIf you don't want to continue just press enter without entering a path.\n")
     path = input(
         "Please give a path to the file you want to create a documentation for: ")
     document(path)

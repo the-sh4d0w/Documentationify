@@ -1,2 +1,4 @@
+|This is an unfinished project. It does not work.|
+-|
 # Documentationify
-Creates a documentation for a python file.
+Creates a simple documentation for a python file.
